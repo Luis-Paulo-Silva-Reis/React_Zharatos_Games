@@ -4,6 +4,8 @@ import React, { PureComponent } from "react";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
 
+// import News from '../News/News'
+
 export class FirstComponents extends PureComponent {
   constructor(props) {
     super(props);
@@ -12,7 +14,7 @@ export class FirstComponents extends PureComponent {
       offset: 0,
       tableData: [],
       orgtableData: [],
-      perPage: 11,
+      perPage: 1,
       currentPage: 0,
     };
     this.handlePageClick = this.handlePageClick.bind(this);
@@ -70,16 +72,17 @@ export class FirstComponents extends PureComponent {
   render() {
     return (
       <div>
-        <h1>Mas olha só temos paginação</h1>
 
         {this.state.tableData.map((tdata, i) => (
           <div className="container-post">
             <p className="title-id">{tdata.id}</p>
             <h2 className="title-post">{tdata.title}</h2>
             <p className="Texto-post">{tdata.body}</p>
-            <a className="More-post" href="http://">
-              LEIA MAIS{" "}
+            <a className="More-post" href={tdata.id}>
+              LEIA MAIS
             </a>
+            {/* <News></News> */}
+
           </div>
         ))}
 

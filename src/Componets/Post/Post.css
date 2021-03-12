@@ -8,12 +8,9 @@
   background-position: right;
   display: flex;
   flex-direction: column;
-  
-  border: 5px solid greenyellow; 
-  margin: 15px ;
 }
 
-.title-id{
+.title-id {
   align-items: center;
   max-width: 50%;
   font-size: 1.5rem;
@@ -21,8 +18,6 @@
   text-align: center;
 
   margin-right: 22px;
-
-  background-color: black;
 }
 
 .title-post {
@@ -31,10 +26,6 @@
   font-size: 1.5rem;
   color: whitesmoke;
   text-align: center;
-
-  margin-right: 22px;
-
-  background-color: black;
 }
 
 .Texto-post {
@@ -44,36 +35,13 @@
   color: whitesmoke;
   text-align: justify;
   padding: 1rem;
-
-  background-color: black;
 }
 
 .More-post {
   max-width: 50%;
-  height: 2.2rem;
   color: whitesmoke;
-  margin-bottom: 1px;
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 55px;
   text-decoration: none;
- 
-  top: 38%;
-
-  background-color: black;
- 
-  
- 
+  font-weight: bold;
 }
-/* 
-.container-last-post {
-  width: 20%;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-size: 1.5rem;
-  color: whitesmoke;
-  
-}
- */

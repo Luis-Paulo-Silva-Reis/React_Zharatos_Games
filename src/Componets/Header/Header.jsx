@@ -4,7 +4,7 @@ import "./Header.css";
 function Header() {
   return (
     <header>
-      <h1>Zharatos games</h1>
+      <h1> Zharatos games </h1>
       <div className="break"></div>
       <a className="cabe" href="Home">Home</a>
       <a className="cabe" href="">Lançamentos</a>
