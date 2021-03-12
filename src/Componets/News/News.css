@@ -1,0 +1,47 @@
+.Container {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid whitesmoke;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+ 
+
+}
+
+.Main {
+  background-color: #333333;
+  width: 60%;
+  height: 303px;
+
+  background-image: url(https://mmosumo.com/wp-content/uploads/2019/05/maxresdefault-1024x576.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: local;
+ 
+  color: whitesmoke;
+  font-size: 16px;
+}
+
+.Sec {
+  width: 40%;
+   flex-direction: column; 
+   color: red; 
+  
+}
+
+.Secnew1 {
+  background-image: url(https://static.invenglobal.com/upload/image/2017/04/20/i1492754661755197.jpeg);
+  background-repeat: no-repeat;
+  
+  height: 150px;
+ 
+  color: burlywood;
+}
+
+
+.Secnew2 {
+  background-image: url(https://static.invenglobal.com/upload/image/2017/04/20/i1492754661755197.jpeg);
+  background-repeat: no-repeat;
+  height: 150px;
+  color: blueviolet;
+}

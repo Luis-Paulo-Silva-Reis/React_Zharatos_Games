@@ -1,0 +1,28 @@
+* {
+  background-color: white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2px;
+  margin: 2px 2px;
+
+}
+
+.main-container {
+  width: 100%;
+}
+
+.Container-master {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  border: 3px solid whitesmoke;
+  margin-bottom: 15px;
+  background-color: black;
+}
+
+/* .App {
+  text-align: right;
+} */
+
+
