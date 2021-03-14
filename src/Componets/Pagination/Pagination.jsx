@@ -1,8 +1,13 @@
 import "./pagination.css";
 import "../Post/Post.css";
+import "./data.json";
 import React, { PureComponent } from "react";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
+require('./data.json');
+// const fs = require('fs')
+
+// fs.readFileSync('./data.json').toString()
 
 // import News from '../News/News'
 
@@ -53,7 +58,7 @@ export class FirstComponents extends PureComponent {
   }
 
   getData() {
-    axios.get("https://jsonplaceholder.typicode.com/posts").then((res) => {
+    axios.get('./data.json').then((res) => {
       var data = res.data;
 
       var slice = data.slice(
@@ -68,11 +73,10 @@ export class FirstComponents extends PureComponent {
       });
     });
   }
-
+  
   render() {
     return (
       <div>
-
         {this.state.tableData.map((tdata, i) => (
           <div className="container-post">
             <p className="title-id">{tdata.id}</p>
@@ -82,7 +86,6 @@ export class FirstComponents extends PureComponent {
               LEIA MAIS
             </a>
             {/* <News></News> */}
-
           </div>
         ))}
 
@@ -99,7 +102,9 @@ export class FirstComponents extends PureComponent {
           subContainerClassName={"pages pagination"}
           activeClassName={"active"}
         />
+      
       </div>
+     
     );
   }
 }
