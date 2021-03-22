@@ -1,15 +1,8 @@
 import "./pagination.css";
-import "../Post/Post.css";
-import "./data.json";
+// import "../Post/Post.css";
 import React, { PureComponent } from "react";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
-require('./data.json');
-// const fs = require('fs')
-
-// fs.readFileSync('./data.json').toString()
-
-// import News from '../News/News'
 
 export class FirstComponents extends PureComponent {
   constructor(props) {
@@ -19,7 +12,7 @@ export class FirstComponents extends PureComponent {
       offset: 0,
       tableData: [],
       orgtableData: [],
-      perPage: 1,
+      perPage: 10,
       currentPage: 0,
     };
     this.handlePageClick = this.handlePageClick.bind(this);
@@ -56,9 +49,9 @@ export class FirstComponents extends PureComponent {
   componentDidMount() {
     this.getData();
   }
-
+  // https://zharatosgames.com/db
   getData() {
-    axios.get('./data.json').then((res) => {
+    axios.get("https://zharatosgames.com/db/data.json").then(res => {
       var data = res.data;
 
       var slice = data.slice(
@@ -73,21 +66,27 @@ export class FirstComponents extends PureComponent {
       });
     });
   }
-  
+
   render() {
     return (
       <div>
         {this.state.tableData.map((tdata, i) => (
-          <div className="container-post">
-            <p className="title-id">{tdata.id}</p>
-            <h2 className="title-post">{tdata.title}</h2>
-            <p className="Texto-post">{tdata.body}</p>
-            <a className="More-post" href={tdata.id}>
-              LEIA MAIS
-            </a>
-            {/* <News></News> */}
+          // <div className="container-post">
+          <div className="bgimg">
+            <div className="linha">
+              <img src={tdata.img} />
           </div>
-        ))}
+
+          <div className="collum">
+              <h2 className="title-post">{tdata.title}</h2>
+              <p className="Texto-post">{tdata.body}</p>
+              <div className="More-post">
+                  <a className="Tomator" href={tdata.url}> LEIA MAIS </a>
+              </div>
+          </div>
+        </div>
+  // </div>
+))}
 
         <ReactPaginate
           previousLabel={"prev"}
@@ -102,9 +101,7 @@ export class FirstComponents extends PureComponent {
           subContainerClassName={"pages pagination"}
           activeClassName={"active"}
         />
-      
       </div>
-     
     );
   }
 }
